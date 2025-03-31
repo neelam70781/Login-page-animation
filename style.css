@@ -2,8 +2,13 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
-    background-color: #FAF9F6;
+    font-family: 'Poppins', sans-serif;
+    /* Replaced with your requested background */
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231229/pngtree-classic-aesthetic-distressed-beige-paper-creates-a-vintage-background-image_13811339.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .container {
@@ -11,8 +16,32 @@ body {
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.85); /* Slightly more opaque to contrast with paper */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+}
+.form-container {
+    width: 270px;
+    background: transparent; /* Ensure no background */
+    padding: 0; /* Remove padding if any */
 }
 
+.form-container .form-row {
+    width: 100%;
+    height: auto; /* Changed from fixed height */
+    min-height: 50px; /* Reduced from 60px */
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; /* Remove bottom margin */
+    padding: 5px 0; /* Add vertical padding instead */
+}
+
+.form-container .form-row:last-child {
+    margin-bottom: 0; /* Ensure no extra space after last row */
+}
 svg,
 .form-container {
     position: absolute;
@@ -36,19 +65,29 @@ svg {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .form-container .form-row input {
     width: 100%;
-    height: 30px;
+    height: 40px; /* Increased height */
     margin: 0;
-    padding: 5px;
+    padding: 10px 15px; /* More padding */
     outline: none;
     border: 2px solid #dddddd;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-container .form-row input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
 }
 
 .form-container .form-row input.valid {
-    border-color: #000000;
+    border-color: #28a745;
 }
 
 .form-container .form-row input[type="checkbox"] {
@@ -57,22 +96,30 @@ svg {
     margin: 0 10px 0 0;
     padding: 0;
     border: 2px solid #dddddd;
+    accent-color: #4a6cf7; /* Custom checkbox color */
 }
 
 .form-container .form-row input[type="submit"] {
-    height: 40px;
+    height: 45px;
     cursor: pointer;
     border: none;
-    background-color: #eeeeee;
-    /*pointer-events: none;*/
+    background: linear-gradient(135deg, #4a6cf7 0%, #2541b2 100%);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
 }
 
-/*.form-container .form-row input[type="submit"].valid {*/
-/*    pointer-events: auto;*/
-/*}*/
+.form-container .form-row input[type="submit"]:hover {
+    background: linear-gradient(135deg, #3a5ce4 0%, #1a34a8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.4);
+}
 
-.form-container input[type="submit"]:hover {
-    background-color: #dddddd;
+.form-container .form-row input[type="submit"]:active {
+    transform: translateY(0);
 }
 
 .form-container label,
@@ -84,7 +131,22 @@ svg {
 
 svg {
     stroke-width: 1.2px;
-    /*stroke: #222245;*/
     stroke: #000000;
-    fill: none
+    fill: none;
+}
+
+/* Added animation for the container */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.container {
+    animation: fadeIn 0.6s ease-out forwards;
 }

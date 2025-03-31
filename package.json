@@ -1,0 +1,26 @@
+{
+  "name": "login-page-animation",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "vite",
+    "serve": "http-server -p 3000 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neelam70781/Login-page-animation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/neelam70781/Login-page-animation/issues"
+  },
+  "homepage": "https://github.com/neelam70781/Login-page-animation#readme",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
