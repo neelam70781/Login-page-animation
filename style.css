@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     /* Replaced with your requested background */
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231229/pngtree-classic-aesthetic-distressed-beige-paper-creates-a-vintage-background-image_13811339.png');
+    background-image: url('https://img.freepik.com/free-vector/cute-minimal-background-simple-cream-design-vector_53876-157711.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -87,7 +87,7 @@ svg {
 }
 
 .form-container .form-row input.valid {
-    border-color: #28a745;
+    border-color: #070a07;
 }
 
 .form-container .form-row input[type="checkbox"] {
@@ -150,3 +150,7 @@ svg {
 .container {
     animation: fadeIn 0.6s ease-out forwards;
 }
+:root {
+    --vintage-brown: #5a4a42;
+    --parchment: rgba(255, 248, 240, 0.9);
+  }

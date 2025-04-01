@@ -39,7 +39,7 @@ const carWeightConnector = document.querySelector('.car-weight-connector');
 const grabbingHand = document.querySelectorAll('.grabbing-hand');
 const grabbingHandOpenFingers = Array.from(document.querySelectorAll('.grabbing-hand-finger-open'));
 const grabbingHandClosedFingers = Array.from(document.querySelectorAll('.grabbing-hand-finger-closed'));
-
+const gearsTl = gsap.timeline({duration: 0.5});
 
 layoutPreparation();
 scaleToFit();
